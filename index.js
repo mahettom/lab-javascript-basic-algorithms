@@ -16,3 +16,39 @@ if (hacker1.length > hacker2.length) {
 }
 
 // Iteration 3: Loops
+
+// 1)
+let modifyHacker1 = '';
+
+for (i = 0; i < hacker1.length; i++){
+    modifyHacker1 += hacker1[i].toUpperCase() + ' ';
+}
+console.log(modifyHacker1);
+
+// 2)
+let reversedHacker2 = '';
+
+for (i = hacker2.length - 1; i >= 0; i--){
+    reversedHacker2 += hacker2[i];
+}
+console.log(reversedHacker2);
+
+// 3)
+if (hacker1 === hacker2){
+    console.log("What?! You both have the same name?");
+
+} else {
+
+    for (i = 0; i < hacker1.length; i++) {
+
+        if (hacker1[i] < hacker2[i] || hacker1[i] === undefined) {
+            console.log("The driver's name goes first.");
+            break;
+        }
+        
+        else if (hacker2[i] < hacker1[i] || hacker2[i] === undefined) {
+            console.log("Yo, the navigator goes first definitely.");
+            break;
+        }
+    }
+}
